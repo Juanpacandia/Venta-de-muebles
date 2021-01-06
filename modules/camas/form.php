@@ -54,14 +54,14 @@ if ($_GET['form']=='add') { ?>
                 <div class="col-sm-5">
                     <select class="form-control" name="tamaño" required>
                           <option value=""></option>
-                          <option value="Sencilla">Sencilla</option>
-                          <option value="Semidoble">Semidoble</option>
-                          <option value="Doble">Doble</option>
-                          <option value="Cuna">Cuna</option>
-                          <option value="Base de cama">Base de cama</option>
-                          <option value="Colchon">Colchon</option>
-                          <option value="Proyector de colchon">Protector de colchon</option>
-                          <option value="Colchon infantil">Colchon infantil</option>
+                          <option value="sencilla">Sencilla</option>
+                          <option value="semidoble">Semidoble</option>
+                          <option value="doble">Doble</option>
+                          <option value="cuna">Cuna</option>
+                          <option value="base de cama">Base de cama</option>
+                          <option value="colchon">Colchon</option>
+                          <option value="proyector de colchon">Protector de colchon</option>
+                          <option value="colchon infantil">Colchon infantil</option>
                       </select>                
                   </div>
               </div>
@@ -149,10 +149,10 @@ elseif ($_GET['form']=='edit') {
                       <option value="semidoble">Semidoble</option>
                       <option value="doble">Doble</option>
                       <option value="cuna">Cuna</option>
-                      <option value="Base de cama">Base de cama</option>
-                      <option value="Colchon">Colchon</option>
-                      <option value="Proyector de colchon">Protector de colchon</option>
-                      <option value="Colchon infantil">Colchon infantil</option>
+                      <option value="base de cama">Base de cama</option>
+                      <option value="colchon">Colchon</option>
+                      <option value="proyector de colchon">Protector de colchon</option>
+                      <option value="colchon infantil">Colchon infantil</option>
                     </select>
                 </div>
               </div>
