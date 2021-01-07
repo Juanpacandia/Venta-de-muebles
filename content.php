@@ -49,6 +49,44 @@ else {
 		include "modules/sofas_transaction/form.php";
 	}
 
+/* Modulos de almacenamiento */
+
+	
+	elseif ($_GET['module'] == 'almacenamiento') {
+		include "modules/almacenamiento/view.php";
+	}
+
+	elseif ($_GET['module'] == 'form_almacenamiento') {
+		include "modules/almacenamiento/form.php";
+	}
+
+
+	elseif ($_GET['module'] == 'almacenamiento_transaction') {
+		include "modules/almacenamiento_transaction/view.php";
+	}
+
+	elseif ($_GET['module'] == 'form_almacenamiento_transaction') {
+		include "modules/almacenamiento_transaction/form.php";
+	}	
+
+/* Modulos de mesas */
+
+	elseif ($_GET['module'] == 'mesas') {
+		include "modules/mesas/view.php";
+	}
+
+	elseif ($_GET['module'] == 'form_mesas') {
+		include "modules/mesas/form.php";
+	}
+
+
+	elseif ($_GET['module'] == 'mesas_transaction') {
+		include "modules/mesas_transaction/view.php";
+	}
+
+	elseif ($_GET['module'] == 'form_mesas_transaction') {
+		include "modules/mesas_transaction/form.php";
+	}
 
 	elseif ($_GET['module'] == 'stock_inventory') {
 		include "modules/stock_inventory/view.php";
