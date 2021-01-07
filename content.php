@@ -12,6 +12,8 @@ else {
 		include "modules/start/view.php";
 	}
 
+/* Modulos de camas */
+
 	elseif ($_GET['module'] == 'camas') {
 		include "modules/camas/view.php";
 	}
@@ -29,6 +31,24 @@ else {
 		include "modules/camas_transaction/form.php";
 	}
 	
+/* Modulos de sofas */
+
+	elseif ($_GET['module'] == 'sofas') {
+		include "modules/sofas/view.php";
+	}
+
+	elseif ($_GET['module'] == 'form_sofas') {
+		include "modules/sofas/form.php";
+	}
+	
+	elseif ($_GET['module'] == 'sofas_transaction') {
+		include "modules/sofas_transaction/view.php";
+	}
+
+	elseif ($_GET['module'] == 'form_sofas_transaction') {
+		include "modules/sofas_transaction/form.php";
+	}
+
 
 	elseif ($_GET['module'] == 'stock_inventory') {
 		include "modules/stock_inventory/view.php";
