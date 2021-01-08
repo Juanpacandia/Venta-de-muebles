@@ -32,8 +32,8 @@ if ($_SESSION['permisos_acceso']=='Super Admin') { ?>
       		<ul class="treeview-menu">
         		<li class="active"><a href="?module=camas"><i class="fa fa-circle"></i> Datos de Camas </a></li>
         		<li><a href="?module=camas_transaction"><i class="fa fa-circle-o"></i> Registro de Camas </a></li>
-            <li><a href="?module=stock_inventory"><i class="fa fa-circle-o"></i> Stock de Camas </a></li>
-            <li><a href="?module=stock_report"><i class="fa fa-circle-o"></i> Registro de Camas</a></li>
+            <li><a href="?module=camas_stock_inventory"><i class="fa fa-circle-o"></i> Stock de Camas </a></li>
+            <li><a href="?module=camas_stock_report"><i class="fa fa-circle-o"></i> Registro de Camas</a></li>
           </ul>
     	</li>
     <?php
@@ -47,14 +47,14 @@ if ($_SESSION['permisos_acceso']=='Super Admin') { ?>
       		<ul class="treeview-menu">
         		<li><a href="?module=camas"><i class="fa fa-circle-o"></i> Datos de Camas </a></li>
             <li class="active"><a href="?module=camas_transaction"><i class="fa fa-circle"></i> Registro de Camas </a></li>
-            <li><a href="?module=stock_inventory_camas"><i class="fa fa-circle-o"></i> Stock de Camas </a></li>
-            <li><a href="?module=stock_report_camas"><i class="fa fa-circle-o"></i> Registro de Camas</a></li>
+            <li><a href="?module=camas_stock_inventory"><i class="fa fa-circle-o"></i> Stock de Camas </a></li>
+            <li><a href="?module=camas_stock_report"><i class="fa fa-circle-o"></i> Registro de Camas</a></li>
       		</ul>
     	</li>
     <?php
   }
   
-  elseif ($_GET["module"]=="stock_inventory_camas") { ?>
+  elseif ($_GET["module"]=="camas_stock_inventory") { ?>
 		<li class="active treeview">
           	<a href="javascript:void(0);">
             	<i class="fa fa-folder-o"></i> <span>Camas y colchones</span> <i class="fa fa-angle-left pull-right"></i>
@@ -62,14 +62,14 @@ if ($_SESSION['permisos_acceso']=='Super Admin') { ?>
       		<ul class="treeview-menu">
         		<li><a href="?module=camas"><i class="fa fa-circle-o"></i> Datos de Camas </a></li>
             <li><a href="?module=camas_transaction"><i class="fa fa-circle-o"></i> Registro de Camas </a></li>
-            <li class="active"><a href="?module=stock_inventory_camas"><i class="fa fa-circle"></i> Stock de Camas </a></li>
-            <li><a href="?module=stock_report_camas"><i class="fa fa-circle-o"></i> Registro de Camas</a></li>
+            <li class="active"><a href="?module=camas_stock_inventory"><i class="fa fa-circle"></i> Stock de Camas </a></li>
+            <li><a href="?module=camas_stock_report"><i class="fa fa-circle-o"></i> Registro de Camas</a></li>
       		</ul>
     	</li>
     <?php
   }
   
-  elseif ($_GET["module"]=="stock_report_camas") { ?>
+  elseif ($_GET["module"]=="camas_stock_report") { ?>
 		<li class="active treeview">
           	<a href="javascript:void(0);">
             	<i class="fa fa-folder-o"></i> <span>Camas y colchones</span> <i class="fa fa-angle-left pull-right"></i>
@@ -77,8 +77,8 @@ if ($_SESSION['permisos_acceso']=='Super Admin') { ?>
       		<ul class="treeview-menu">
         		<li><a href="?module=camas"><i class="fa fa-circle-o"></i> Datos de Camas </a></li>
             <li><a href="?module=camas_transaction"><i class="fa fa-circle-o"></i> Registro de Camas </a></li>
-            <li><a href="?module=stock_inventory_camas"><i class="fa fa-circle-o"></i> Stock de Camas </a></li>
-            <li class="active"><a href="?module=stock_report_camas"><i class="fa fa-circle"></i> Registro de Camas</a></li>
+            <li><a href="?module=camas_stock_inventory"><i class="fa fa-circle-o"></i> Stock de Camas </a></li>
+            <li class="active"><a href="?module=camas_stock_report"><i class="fa fa-circle"></i> Registro de Camas</a></li>
       		</ul>
     	</li>
     <?php
@@ -92,8 +92,8 @@ if ($_SESSION['permisos_acceso']=='Super Admin') { ?>
       		<ul class="treeview-menu">
         		<li><a href="?module=camas"><i class="fa fa-circle-o"></i> Datos de Camas </a></li>
         		<li><a href="?module=camas_transaction"><i class="fa fa-circle-o"></i> Registro de Camas </a></li>
-            	<li><a href="?module=stock_inventory_camas"><i class="fa fa-circle-o"></i> Stock de Camas </a></li>
-            	<li><a href="?module=stock_report_camas"><i class="fa fa-circle-o"></i> Registro de Camas</a></li>
+            	<li><a href="?module=camas_stock_inventory"><i class="fa fa-circle-o"></i> Stock de Camas </a></li>
+            	<li><a href="?module=camas_stock_report"><i class="fa fa-circle-o"></i> Registro de Camas</a></li>
           </ul>
     	</li>
     <?php
@@ -109,8 +109,8 @@ if ($_SESSION['permisos_acceso']=='Super Admin') { ?>
       		<ul class="treeview-menu">
         		<li class="active"><a href="?module=sofas"><i class="fa fa-circle"></i> Datos de Sofas </a></li>
         		<li><a href="?module=sofas_transaction"><i class="fa fa-circle-o"></i> Registro de Sofas </a></li>
-            <li><a href="?module=stock_inventory_sofas"><i class="fa fa-circle-o"></i> Stock de Sofas </a></li>
-            <li><a href="?module=stock_report_sofas"><i class="fa fa-circle-o"></i> Registro de Sofas </a></li>
+            <li><a href="?module=sofas_stock_inventory"><i class="fa fa-circle-o"></i> Stock de Sofas </a></li>
+            <li><a href="?module=sofas_stock_report"><i class="fa fa-circle-o"></i> Registro de Sofas </a></li>
           </ul>
     	</li>
     <?php
@@ -124,14 +124,14 @@ if ($_SESSION['permisos_acceso']=='Super Admin') { ?>
       		<ul class="treeview-menu">
         		<li><a href="?module=sofas"><i class="fa fa-circle-o"></i> Datos de Sofas </a></li>
             <li class="active"><a href="?module=sofas_transaction"><i class="fa fa-circle"></i> Registro de Sofas </a></li>
-            <li><a href="?module=stock_inventory_sofas"><i class="fa fa-circle-o"></i> Stock de Sofas </a></li>
-            <li><a href="?module=stock_report_sofas"><i class="fa fa-circle-o"></i> Registro de Sofas </a></li>
+            <li><a href="?module=sofas_stock_inventory"><i class="fa fa-circle-o"></i> Stock de Sofas </a></li>
+            <li><a href="?module=sofas_stock_report"><i class="fa fa-circle-o"></i> Registro de Sofas </a></li>
       		</ul>
     	</li>
     <?php
   }
   
-  elseif ($_GET["module"]=="stock_inventory_sofas") { ?>
+  elseif ($_GET["module"]=="sofas_stock_inventory") { ?>
 		<li class="active treeview">
           	<a href="javascript:void(0);">
             	<i class="fa fa-folder-o"></i> <span>Sofas</span> <i class="fa fa-angle-left pull-right"></i>
@@ -139,14 +139,14 @@ if ($_SESSION['permisos_acceso']=='Super Admin') { ?>
       		<ul class="treeview-menu">
         		<li><a href="?module=sofas"><i class="fa fa-circle-o"></i> Datos de Sofas </a></li>
             <li><a href="?module=sofas_transaction"><i class="fa fa-circle-o"></i> Registro de Sofas </a></li>
-            <li class="active"><a href="?module=stock_inventory_sofas"><i class="fa fa-circle"></i> Stock de Sofas </a></li>
-            <li><a href="?module=stock_report_sofas"><i class="fa fa-circle-o"></i> Registro de Sofas </a></li>
+            <li class="active"><a href="?module=sofas_stock_inventory"><i class="fa fa-circle"></i> Stock de Sofas </a></li>
+            <li><a href="?module=sofas_stock_report"><i class="fa fa-circle-o"></i> Registro de Sofas </a></li>
       		</ul>
     	</li>
     <?php
   }
   
-  elseif ($_GET["module"]=="stock_report_sofas") { ?>
+  elseif ($_GET["module"]=="sofas_stock_report") { ?>
 		<li class="active treeview">
           	<a href="javascript:void(0);">
             	<i class="fa fa-folder-o"></i> <span>Sofas</span> <i class="fa fa-angle-left pull-right"></i>
@@ -154,8 +154,8 @@ if ($_SESSION['permisos_acceso']=='Super Admin') { ?>
       		<ul class="treeview-menu">
         		<li><a href="?module=sofas"><i class="fa fa-circle-o"></i> Datos de Sofas </a></li>
             <li><a href="?module=sofas_transaction"><i class="fa fa-circle-o"></i> Registro de Sofas </a></li>
-            <li><a href="?module=stock_inventory_sofas"><i class="fa fa-circle-o"></i> Stock de Sofas </a></li>
-            <li class="active"><a href="?module=stock_report_sofas"><i class="fa fa-circle"></i> Registro de Sofas </a></li>
+            <li><a href="?module=sofas_stock_inventory"><i class="fa fa-circle-o"></i> Stock de Sofas </a></li>
+            <li class="active"><a href="?module=sofas_stock_report"><i class="fa fa-circle"></i> Registro de Sofas </a></li>
       		</ul>
     	</li>
     <?php
@@ -169,8 +169,8 @@ if ($_SESSION['permisos_acceso']=='Super Admin') { ?>
       		<ul class="treeview-menu">
         		<li><a href="?module=sofas"><i class="fa fa-circle-o"></i> Datos de Sofas </a></li>
         		<li><a href="?module=sofas_transaction"><i class="fa fa-circle-o"></i> Registro de Sofas </a></li>
-            <li><a href="?module=stock_inventory_sofas"><i class="fa fa-circle-o"></i> Stock de Sofas </a></li>
-            <li><a href="?module=stock_report_sofas"><i class="fa fa-circle-o"></i> Registro de Sofas </a></li>
+            <li><a href="?module=sofas_stock_inventory"><i class="fa fa-circle-o"></i> Stock de Sofas </a></li>
+            <li><a href="?module=sofas_stock_report"><i class="fa fa-circle-o"></i> Registro de Sofas </a></li>
           </ul>
     	</li>
     <?php
@@ -186,8 +186,8 @@ if ($_SESSION['permisos_acceso']=='Super Admin') { ?>
       		<ul class="treeview-menu">
         		<li class="active"><a href="?module=almacenamiento"><i class="fa fa-circle"></i> Datos de Almacenamiento </a></li>
         		<li><a href="?module=almacenamiento_transaction"><i class="fa fa-circle-o"></i> Registro de Almacenamiento </a></li>
-            <li><a href="?module=stock_inventory_almacenamiento"><i class="fa fa-circle-o"></i> Stock de Almacenamiento </a></li>
-            <li><a href="?module=stock_report_almacenamiento"><i class="fa fa-circle-o"></i> Registro de Almacenamiento </a></li>
+            <li><a href="?module=almacenamiento_stock_inventory"><i class="fa fa-circle-o"></i> Stock de Almacenamiento </a></li>
+            <li><a href="?module=almacenamiento_stock_report"><i class="fa fa-circle-o"></i> Registro de Almacenamiento </a></li>
           </ul>
     	</li>
     <?php
@@ -201,14 +201,14 @@ if ($_SESSION['permisos_acceso']=='Super Admin') { ?>
       		<ul class="treeview-menu">
         		<li><a href="?module=almacenamiento"><i class="fa fa-circle-o"></i> Datos de almacenamiento </a></li>
             <li class="active"><a href="?module=almacenamiento_transaction"><i class="fa fa-circle"></i> Registro de Almacenamiento </a></li>
-            <li><a href="?module=stock_inventory_almacenamiento"><i class="fa fa-circle-o"></i> Stock de Almacenamiento </a></li>
-            <li><a href="?module=stock_report_almacenamiento"><i class="fa fa-circle-o"></i> Registro de Almacenamiento </a></li>
+            <li><a href="?module=almacenamiento_stock_inventory"><i class="fa fa-circle-o"></i> Stock de Almacenamiento </a></li>
+            <li><a href="?module=almacenamiento_stock_report"><i class="fa fa-circle-o"></i> Registro de Almacenamiento </a></li>
       		</ul>
     	</li>
     <?php
   }
   
-  elseif ($_GET["module"]=="stock_inventory_almacenamiento") { ?>
+  elseif ($_GET["module"]=="almacenamiento_stock_inventory") { ?>
 		<li class="active treeview">
           	<a href="javascript:void(0);">
             	<i class="fa fa-folder-o"></i> <span>Almacenamiento</span> <i class="fa fa-angle-left pull-right"></i>
@@ -216,14 +216,14 @@ if ($_SESSION['permisos_acceso']=='Super Admin') { ?>
       		<ul class="treeview-menu">
         		<li><a href="?module=almacenamiento"><i class="fa fa-circle-o"></i> Datos de Almacenamiento </a></li>
             <li><a href="?module=almacenamiento_transaction"><i class="fa fa-circle-o"></i> Registro de Almacenamiento </a></li>
-            <li class="active"><a href="?module=stock_inventory_almacenamiento"><i class="fa fa-circle"></i> Stock de Almacenamiento </a></li>
+            <li class="active"><a href="?module=almacenamiento_stock_inventory"><i class="fa fa-circle"></i> Stock de Almacenamiento </a></li>
             <li><a href="?module=stock_report_almacenamiento"><i class="fa fa-circle-o"></i> Registro de Almacenamiento </a></li>
       		</ul>
     	</li>
     <?php
   }
   
-  elseif ($_GET["module"]=="stock_report_almacenamiento") { ?>
+  elseif ($_GET["module"]=="almacenamiento_stock_report") { ?>
 		<li class="active treeview">
           	<a href="javascript:void(0);">
             	<i class="fa fa-folder-o"></i> <span>Almacenamiento</span> <i class="fa fa-angle-left pull-right"></i>
@@ -231,8 +231,8 @@ if ($_SESSION['permisos_acceso']=='Super Admin') { ?>
       		<ul class="treeview-menu">
         		<li><a href="?module=almacenamiento"><i class="fa fa-circle-o"></i> Datos de Almacenamiento </a></li>
             <li><a href="?module=almacenamiento_transaction"><i class="fa fa-circle-o"></i> Registro de Almacenamiento </a></li>
-            <li><a href="?module=stock_inventory_almacenamiento"><i class="fa fa-circle-o"></i> Stock de Almacenamiento </a></li>
-            <li class="active"><a href="?module=stock_report_almacenamiento"><i class="fa fa-circle"></i> Registro de Almacenamiento </a></li>
+            <li><a href="?module=almacenamiento_stock_inventory"><i class="fa fa-circle-o"></i> Stock de Almacenamiento </a></li>
+            <li class="active"><a href="?module=almacenamiento_stock_report"><i class="fa fa-circle"></i> Registro de Almacenamiento </a></li>
       		</ul>
     	</li>
     <?php
@@ -246,8 +246,8 @@ if ($_SESSION['permisos_acceso']=='Super Admin') { ?>
       		<ul class="treeview-menu">
         		<li><a href="?module=almacenamiento"><i class="fa fa-circle-o"></i> Datos de Almacenamiento </a></li>
         		<li><a href="?module=almacenamiento_transaction"><i class="fa fa-circle-o"></i> Registro de Almacenamiento </a></li>
-            <li><a href="?module=stock_inventory_almacenamiento"><i class="fa fa-circle-o"></i> Stock de Almacenamiento </a></li>
-            <li><a href="?module=stock_report_almacenamiento"><i class="fa fa-circle-o"></i> Registro de Almacenamiento </a></li>
+            <li><a href="?module=almacenamiento_stock_inventory"><i class="fa fa-circle-o"></i> Stock de Almacenamiento </a></li>
+            <li><a href="?module=almacenamiento_stock_report"><i class="fa fa-circle-o"></i> Registro de Almacenamiento </a></li>
           </ul>
     	</li>
     <?php
@@ -263,8 +263,8 @@ if ($_SESSION['permisos_acceso']=='Super Admin') { ?>
 		  <ul class="treeview-menu">
 			<li class="active"><a href="?module=mesas"><i class="fa fa-circle"></i> Datos de Mesas </a></li>
 			<li><a href="?module=mesas_transaction"><i class="fa fa-circle-o"></i> Registro de Mesas </a></li>
-		<li><a href="?module=stock_inventory_mesas"><i class="fa fa-circle-o"></i> Stock de Mesas </a></li>
-		<li><a href="?module=stock_report_mesas"><i class="fa fa-circle-o"></i> Registro de Mesas </a></li>
+		<li><a href="?module=mesas_stock_inventory"><i class="fa fa-circle-o"></i> Stock de Mesas </a></li>
+		<li><a href="?module=mesas_stock_report"><i class="fa fa-circle-o"></i> Registro de Mesas </a></li>
 	  </ul>
 	</li>
 <?php
@@ -278,14 +278,14 @@ elseif ($_GET["module"]=="mesas_transaction") { ?>
 		  <ul class="treeview-menu">
 			<li><a href="?module=mesas"><i class="fa fa-circle-o"></i> Datos de Mesas </a></li>
 		<li class="active"><a href="?module=mesas_transaction"><i class="fa fa-circle"></i> Registro de Mesas </a></li>
-		<li><a href="?module=stock_inventory_mesas"><i class="fa fa-circle-o"></i> Stock de Mesas </a></li>
-		<li><a href="?module=stock_report_mesas"><i class="fa fa-circle-o"></i> Registro de Mesas </a></li>
+		<li><a href="?module=mesas_stock_inventory"><i class="fa fa-circle-o"></i> Stock de Mesas </a></li>
+		<li><a href="?module=mesas_stock_report"><i class="fa fa-circle-o"></i> Registro de Mesas </a></li>
 		  </ul>
 	</li>
 <?php
 }
 
-elseif ($_GET["module"]=="stock_inventory_mesas") { ?>
+elseif ($_GET["module"]=="mesas_stock_inventory") { ?>
 	<li class="active treeview">
 		  <a href="javascript:void(0);">
 			<i class="fa fa-folder-o"></i> <span>Almacenamiento</span> <i class="fa fa-angle-left pull-right"></i>
@@ -293,14 +293,14 @@ elseif ($_GET["module"]=="stock_inventory_mesas") { ?>
 		  <ul class="treeview-menu">
 			<li><a href="?module=mesas"><i class="fa fa-circle-o"></i> Datos de Mesas </a></li>
 		<li><a href="?module=mesas_transaction"><i class="fa fa-circle-o"></i> Registro de Mesas </a></li>
-		<li class="active"><a href="?module=stock_inventory_mesas"><i class="fa fa-circle"></i> Stock de Mesas </a></li>
-		<li><a href="?module=stock_report_mesas"><i class="fa fa-circle-o"></i> Registro de Mesas </a></li>
+		<li class="active"><a href="?module=mesas_stock_inventory"><i class="fa fa-circle"></i> Stock de Mesas </a></li>
+		<li><a href="?module=mesas_stock_report"><i class="fa fa-circle-o"></i> Registro de Mesas </a></li>
 		  </ul>
 	</li>
 <?php
 }
 
-elseif ($_GET["module"]=="stock_report_mesas") { ?>
+elseif ($_GET["module"]=="mesas_stock_report") { ?>
 	<li class="active treeview">
 		  <a href="javascript:void(0);">
 			<i class="fa fa-folder-o"></i> <span>Mesas</span> <i class="fa fa-angle-left pull-right"></i>
@@ -308,8 +308,8 @@ elseif ($_GET["module"]=="stock_report_mesas") { ?>
 		  <ul class="treeview-menu">
 			<li><a href="?module=mesas"><i class="fa fa-circle-o"></i> Datos de Mesas </a></li>
 		<li><a href="?module=mesas_transaction"><i class="fa fa-circle-o"></i> Registro de Mesas </a></li>
-		<li><a href="?module=stock_inventory_mesas"><i class="fa fa-circle-o"></i> Stock de Mesas </a></li>
-		<li class="active"><a href="?module=stock_report_mesas"><i class="fa fa-circle"></i> Registro de Mesas </a></li>
+		<li><a href="?module=mesas_stock_inventory"><i class="fa fa-circle-o"></i> Stock de Mesas </a></li>
+		<li class="active"><a href="?module=mesas_stock_report"><i class="fa fa-circle"></i> Registro de Mesas </a></li>
 		  </ul>
 	</li>
 <?php
@@ -323,8 +323,8 @@ else { ?>
 		  <ul class="treeview-menu">
 			<li><a href="?module=mesas"><i class="fa fa-circle-o"></i> Datos de Mesas </a></li>
 			<li><a href="?module=mesas_transaction"><i class="fa fa-circle-o"></i> Registro de Mesas </a></li>
-			<li><a href="?module=stock_inventory_mesas"><i class="fa fa-circle-o"></i> Stock de Mesas </a></li>
-			<li><a href="?module=stock_report_mesas"><i class="fa fa-circle-o"></i> Registro de Mesas </a></li>
+			<li><a href="?module=mesas_stock_inventory"><i class="fa fa-circle-o"></i> Stock de Mesas </a></li>
+			<li><a href="?module=mesas_stock_report"><i class="fa fa-circle-o"></i> Registro de Mesas </a></li>
 	  	  </ul>
 	</li>
 <?php

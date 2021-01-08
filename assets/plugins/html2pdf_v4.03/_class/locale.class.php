@@ -61,6 +61,7 @@ class HTML2PDF_locale
         }
 
         // load the file
+        ob_start();
         self::$_list = array();
         $handle = fopen($file, 'r');
         while (!feof($handle)) {
@@ -69,6 +70,8 @@ class HTML2PDF_locale
             self::$_list[trim($line[0])] = trim($line[1]);
         }
         fclose($handle);
+        ob_end_clean();
+
     }
 
     /**

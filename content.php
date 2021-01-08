@@ -30,6 +30,14 @@ else {
 	elseif ($_GET['module'] == 'form_camas_transaction') {
 		include "modules/camas_transaction/form.php";
 	}
+
+	elseif ($_GET['module'] == 'camas_stock_inventory') {
+		include "modules/camas_stock_inventory/view.php";
+	}
+
+	elseif ($_GET['module'] == 'camas_stock_report') {
+		include "modules/camas_stock_report/view.php";
+	}
 	
 /* Modulos de sofas */
 
@@ -49,6 +57,14 @@ else {
 		include "modules/sofas_transaction/form.php";
 	}
 
+	elseif ($_GET['module'] == 'sofas_stock_inventory') {
+		include "modules/sofas_stock_inventory/view.php";
+	}
+
+	elseif ($_GET['module'] == 'sofas_stock_report') {
+		include "modules/sofas_stock_report/view.php";
+	}
+
 /* Modulos de almacenamiento */
 
 	
@@ -60,7 +76,6 @@ else {
 		include "modules/almacenamiento/form.php";
 	}
 
-
 	elseif ($_GET['module'] == 'almacenamiento_transaction') {
 		include "modules/almacenamiento_transaction/view.php";
 	}
@@ -68,6 +83,14 @@ else {
 	elseif ($_GET['module'] == 'form_almacenamiento_transaction') {
 		include "modules/almacenamiento_transaction/form.php";
 	}	
+
+	elseif ($_GET['module'] == 'almacenamiento_stock_inventory') {
+		include "modules/almacenamiento_stock_inventory/view.php";
+	}
+
+	elseif ($_GET['module'] == 'almacenamiento_stock_report') {
+		include "modules/almacenamiento_stock_report/view.php";
+	}
 
 /* Modulos de mesas */
 
@@ -79,7 +102,6 @@ else {
 		include "modules/mesas/form.php";
 	}
 
-
 	elseif ($_GET['module'] == 'mesas_transaction') {
 		include "modules/mesas_transaction/view.php";
 	}
@@ -87,6 +109,16 @@ else {
 	elseif ($_GET['module'] == 'form_mesas_transaction') {
 		include "modules/mesas_transaction/form.php";
 	}
+
+	elseif ($_GET['module'] == 'mesas_stock_inventory') {
+		include "modules/mesas_stock_inventory/view.php";
+	}
+
+	elseif ($_GET['module'] == 'mesas_stock_report') {
+		include "modules/mesas_stock_report/view.php";
+	}
+
+/* Modulo de reportes generales */
 
 	elseif ($_GET['module'] == 'stock_inventory') {
 		include "modules/stock_inventory/view.php";
