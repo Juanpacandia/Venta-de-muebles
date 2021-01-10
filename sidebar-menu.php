@@ -333,31 +333,27 @@ else { ?>
   
   /* Modulo de reportes */
 
-	if ($_GET["module"]=="stock_inventory") { ?>
+	if ($_GET["module"]=="general_stock_inventory") { ?>
 		<li class="active treeview">
           	<a href="javascript:void(0);">
-            	<i class="fa fa-file-text"></i> <span>Reportes</span> <i class="fa fa-angle-left pull-right"></i>
+            	<i class="fa fa-file-text"></i> <span>Reportes Generales</span> <i class="fa fa-angle-left pull-right"></i>
           	</a>
       		<ul class="treeview-menu">
-                <li class="active"><a href="?module=stock_inventory"><i class="fa fa-circle-o"></i> Camas </a>
-                  <ul class="treeview-menu">
-                    <li class="active"><a href="?module=stock_inventory"><i class="fa fa-circle-o"></i> Stock de Camas </a></li>
-                    <li><a href="?module=stock_report"><i class="fa fa-circle-o"></i> Registro de Camas</a></li>
-                  </ul>
-                </li>
+        		<li class="active"><a href="?module=general_stock_inventory"><i class="fa fa-circle"></i> Stock General </a></li>
+        		<li><a href="?module=general_stock_report"><i class="fa fa-circle-o"></i> Registro General </a></li>
       		</ul>
     	</li>
     <?php
 	}
 
-	elseif ($_GET["module"]=="stock_report") { ?>
+	elseif ($_GET["module"]=="general_stock_report") { ?>
 		<li class="active treeview">
           	<a href="javascript:void(0);">
-            	<i class="fa fa-file-text"></i> <span>Reportes</span> <i class="fa fa-angle-left pull-right"></i>
+            	<i class="fa fa-file-text"></i> <span>Reportes Generales</span> <i class="fa fa-angle-left pull-right"></i>
           	</a>
       		<ul class="treeview-menu">
-        		<li><a href="?module=stock_inventory"><i class="fa fa-circle-o"></i> Stock de Camas </a></li>
-        		<li class="active"><a href="?module=stock_report"><i class="fa fa-circle-o"></i> Registro de Camas </a></li>
+        		<li><a href="?module=general_stock_inventory"><i class="fa fa-circle-o"></i> Stock General </a></li>
+        		<li class="active"><a href="?module=general_stock_report"><i class="fa fa-circle"></i> Registro General </a></li>
       		</ul>
     	</li>
     <?php
@@ -366,11 +362,11 @@ else { ?>
 	else { ?>
 		<li class="treeview">
           	<a href="javascript:void(0);">
-            	<i class="fa fa-file-text"></i> <span>Reportes</span> <i class="fa fa-angle-left pull-right"></i>
+            	<i class="fa fa-file-text"></i> <span>Reportes Generales</span> <i class="fa fa-angle-left pull-right"></i>
           	</a>
       		<ul class="treeview-menu">
-        		<li><a href="?module=stock_inventory"><i class="fa fa-circle-o"></i> Stock de Camas </a></li>
-        		<li><a href="?module=stock_report"><i class="fa fa-circle-o"></i> Registro de Camas </a></li>
+        		<li><a href="?module=general_stock_inventory"><i class="fa fa-circle-o"></i> Stock General </a></li>
+        		<li><a href="?module=general_stock_report"><i class="fa fa-circle-o"></i> Registro General </a></li>
       		</ul>
     	</li>
     <?php

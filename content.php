@@ -120,12 +120,12 @@ else {
 
 /* Modulo de reportes generales */
 
-	elseif ($_GET['module'] == 'stock_inventory') {
-		include "modules/stock_inventory/view.php";
+	elseif ($_GET['module'] == 'general_stock_inventory') {
+		include "modules/general_stock_inventory/view.php";
 	}
 
-	elseif ($_GET['module'] == 'stock_report') {
-		include "modules/stock_report/view.php";
+	elseif ($_GET['module'] == 'general_stock_report') {
+		include "modules/general_stock_report/view.php";
 	}
 
 	elseif ($_GET['module'] == 'user') {
