@@ -18,7 +18,7 @@
       
       <div class="box box-primary">
         <!-- form start -->
-        <form role="form" class="form-horizontal" method="GET" action="modules/stock_report/print.php" target="_blank">
+        <form role="form" class="form-horizontal" method="GET" action="modules/general_stock_report/print.php" target="_blank">
           <div class="box-body">
 
             <div class="form-group">
