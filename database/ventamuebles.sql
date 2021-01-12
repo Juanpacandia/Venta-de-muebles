@@ -70,33 +70,7 @@ INSERT INTO `camas` (`codigo_cama`, `tamaño`, `precio_compra`, `precio_venta`, 
 
 -- --------------------------------------------------------
 
---
--- Estructura de tabla para la tabla `medicamentos`
---
-
-CREATE TABLE `medicamentos` (
-  `codigo` varchar(7) NOT NULL,
-  `nombre` varchar(50) NOT NULL,
-  `precio_compra` int(11) NOT NULL,
-  `precio_venta` int(11) NOT NULL,
-  `unidad` varchar(20) NOT NULL,
-  `stock` int(11) NOT NULL,
-  `created_user` int(3) NOT NULL,
-  `created_date` timestamp NOT NULL DEFAULT current_timestamp(),
-  `updated_user` int(3) NOT NULL,
-  `updated_date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `medicamentos`
---
-
-INSERT INTO `medicamentos` (`codigo`, `nombre`, `precio_compra`, `precio_venta`, `unidad`, `stock`, `created_user`, `created_date`, `updated_user`, `updated_date`) VALUES
-('B000362', 'Dulvanex', 50, 75, 'cajas', 2, 1, '2017-07-24 16:43:20', 1, '2021-01-03 08:44:13'),
-('B000363', 'Controlip', 12, 50, 'cajas', 10, 1, '2017-07-24 16:56:58', 1, '2017-07-26 02:09:28'),
-('B000364', 'Quetiazic', 25, 50, 'cajas', 20, 1, '2017-07-25 02:59:48', 1, '2021-01-03 09:27:40');
-
--- --------------------------------------------------------
+---- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `mesas`
@@ -179,21 +153,6 @@ INSERT INTO `transaccion_camas` (`codigo_transaccion`, `fecha`, `codigo_cama`, `
 ('TM-2021-0000013', '2021-01-06', 'B000002', 10, 1, '2021-01-06 05:32:23', 'Entrada'),
 ('TM-2021-0000014', '2021-01-06', 'B000005', 20, 1, '2021-01-06 05:32:43', 'Entrada');
 
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `transaccion_medicamentos`
---
-
-CREATE TABLE `transaccion_medicamentos` (
-  `codigo_transaccion` varchar(15) NOT NULL,
-  `fecha` date NOT NULL,
-  `codigo` varchar(7) NOT NULL,
-  `numero` int(11) NOT NULL,
-  `created_user` int(3) NOT NULL,
-  `created_date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `tipo_transaccion` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -241,7 +200,7 @@ CREATE TABLE `usuarios` (
   `email` varchar(50) DEFAULT NULL,
   `telefono` varchar(13) DEFAULT NULL,
   `foto` varchar(100) DEFAULT NULL,
-  `permisos_acceso` enum('Super Admin','Gerente','Almacen') NOT NULL,
+  `permisos_acceso` enum('Admin','Empleado') NOT NULL,
   `status` enum('activo','bloqueado') NOT NULL DEFAULT 'activo',
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
@@ -252,8 +211,8 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id_user`, `username`, `name_user`, `password`, `email`, `telefono`, `foto`, `permisos_acceso`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'admin', 'Sistemas Webs', '21232f297a57a5a743894a0e4a801fc3', 'info@sist.com', '7025', 'user-default.png', 'Super Admin', 'activo', '2017-04-01 08:15:15', '2017-07-25 23:35:23'),
-(2, 'juan', 'juan', 'a94652aa97c7211ba8954dd15a3cf838', 'juab@juan.com', '12000', NULL, 'Almacen', 'activo', '2017-07-25 22:34:03', '2017-07-25 22:42:00');
+(1, 'admin', 'Admin', '21232f297a57a5a743894a0e4a801fc3', 'info@sist.com', '7025', 'user-default.png', 'Admin', 'activo', '2017-04-01 08:15:15', '2017-07-25 23:35:23'),
+(2, 'juan', 'juan', 'a94652aa97c7211ba8954dd15a3cf838', 'juab@juan.com', '12000', NULL, 'Empleado', 'activo', '2017-07-25 22:34:03', '2017-07-25 22:42:00');
 
 --
 -- Índices para tablas volcadas
@@ -272,14 +231,6 @@ ALTER TABLE `almacenamiento`
 --
 ALTER TABLE `camas`
   ADD PRIMARY KEY (`codigo_cama`),
-  ADD KEY `created_user` (`created_user`),
-  ADD KEY `updated_user` (`updated_user`);
-
---
--- Indices de la tabla `medicamentos`
---
-ALTER TABLE `medicamentos`
-  ADD PRIMARY KEY (`codigo`),
   ADD KEY `created_user` (`created_user`),
   ADD KEY `updated_user` (`updated_user`);
 
@@ -313,14 +264,6 @@ ALTER TABLE `transaccion_almacenamiento`
 ALTER TABLE `transaccion_camas`
   ADD PRIMARY KEY (`codigo_transaccion`),
   ADD KEY `id_barang` (`codigo_cama`),
-  ADD KEY `created_user` (`created_user`);
-
---
--- Indices de la tabla `transaccion_medicamentos`
---
-ALTER TABLE `transaccion_medicamentos`
-  ADD PRIMARY KEY (`codigo_transaccion`),
-  ADD KEY `id_barang` (`codigo`),
   ADD KEY `created_user` (`created_user`);
 
 --
@@ -375,13 +318,6 @@ ALTER TABLE `camas`
   ADD CONSTRAINT `camas_ibfk_2` FOREIGN KEY (`updated_user`) REFERENCES `usuarios` (`id_user`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Filtros para la tabla `medicamentos`
---
-ALTER TABLE `medicamentos`
-  ADD CONSTRAINT `medicamentos_ibfk_1` FOREIGN KEY (`created_user`) REFERENCES `usuarios` (`id_user`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `medicamentos_ibfk_2` FOREIGN KEY (`updated_user`) REFERENCES `usuarios` (`id_user`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
 -- Filtros para la tabla `mesas`
 --
 ALTER TABLE `mesas`
@@ -408,13 +344,6 @@ ALTER TABLE `transaccion_almacenamiento`
 ALTER TABLE `transaccion_camas`
   ADD CONSTRAINT `transaccion_camas_ibfk_1` FOREIGN KEY (`codigo_cama`) REFERENCES `camas` (`codigo_cama`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `transaccion_camas_ibfk_2` FOREIGN KEY (`created_user`) REFERENCES `usuarios` (`id_user`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Filtros para la tabla `transaccion_medicamentos`
---
-ALTER TABLE `transaccion_medicamentos`
-  ADD CONSTRAINT `transaccion_medicamentos_ibfk_1` FOREIGN KEY (`codigo`) REFERENCES `medicamentos` (`codigo`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `transaccion_medicamentos_ibfk_2` FOREIGN KEY (`created_user`) REFERENCES `usuarios` (`id_user`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `transaccion_mesas`
