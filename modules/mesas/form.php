@@ -39,7 +39,7 @@ if ($_GET['form']=='add') { ?>
 
 
               $buat_id   = str_pad($codigo_mesa, 6, "0", STR_PAD_LEFT);
-              $codigo_mesa = "B$buat_id";
+              $codigo_mesa = "M$buat_id";
               ?>
 
               <div class="form-group">

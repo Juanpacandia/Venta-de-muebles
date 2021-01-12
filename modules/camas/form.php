@@ -39,7 +39,7 @@ if ($_GET['form']=='add') { ?>
 
 
               $buat_id   = str_pad($codigo_cama, 6, "0", STR_PAD_LEFT);
-              $codigo_cama = "B$buat_id";
+              $codigo_cama = "C$buat_id";
               ?>
 
               <div class="form-group">

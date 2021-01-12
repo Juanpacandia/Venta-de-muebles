@@ -37,9 +37,8 @@ if ($_GET['form']=='add') { ?>
                   $codigo_almacenamiento = 1;
               }
 
-
               $buat_id   = str_pad($codigo_almacenamiento, 6, "0", STR_PAD_LEFT);
-              $codigo_almacenamiento = "B$buat_id";
+              $codigo_almacenamiento = "A$buat_id";
               ?>
 
               <div class="form-group">
