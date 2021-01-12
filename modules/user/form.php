@@ -49,9 +49,8 @@ if ($_GET['form']=='add') { ?>
                 <div class="col-sm-5">
                   <select class="form-control" name="permisos_acceso" required>
                     <option value=""></option>
-                    <option value="Super Admin">Super Admin</option>
-                    <option value="Gerente">Gerente</option>
-                    <option value="Almacen">Almacén</option>
+                    <option value="Admin">Admin</option>
+                    <option value="Empleado">Empleado</option>
                   </select>
                 </div>
               </div>
